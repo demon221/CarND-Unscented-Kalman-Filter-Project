@@ -55,6 +55,12 @@ public:
   ///* Radar measurement noise standard deviation radius change in m/s
   double std_radrd_ ;
 
+  ///* Laser measurement covariance matrix
+  MatrixXd R_lidar_;
+
+  ///* Radar measurement covariance matrix
+  MatrixXd R_radar_;
+
   ///* Weights of sigma points
   VectorXd weights_;
 
@@ -67,6 +73,11 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  ///* the current NIS for radar
+  double NIS_radar_;
+
+  ///* the current NIS for laser
+  double NIS_lidar_;
 
   /**
    * Constructor
